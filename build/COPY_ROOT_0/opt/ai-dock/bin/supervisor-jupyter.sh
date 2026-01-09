@@ -13,9 +13,9 @@ function cleanup() {
 }
 
 function start() {
-    source /opt/ai-dock/etc/environment.sh
-    source /opt/ai-dock/bin/venv-set.sh serviceportal
-    source /opt/ai-dock/bin/venv-set.sh jupyter
+    source /opt/starforge-ai/etc/environment.sh
+    source /opt/starforge-ai/bin/venv-set.sh serviceportal
+    source /opt/starforge-ai/bin/venv-set.sh jupyter
     set_kernel_paths
 
 
@@ -59,7 +59,7 @@ function start() {
     # Delay launch until micromamba is ready
     if [[ -f /run/workspace_sync ]]; then
         printf "Waiting for workspace sync...\n"
-        "$SERVICEPORTAL_VENV_PYTHON" /opt/ai-dock/fastapi/logviewer/main.py \
+        "$SERVICEPORTAL_VENV_PYTHON" /opt/starforge-ai/fastapi/logviewer/main.py \
             -p $LISTEN_PORT \
             -r 3 \
             -s "${SERVICE_NAME}" \
