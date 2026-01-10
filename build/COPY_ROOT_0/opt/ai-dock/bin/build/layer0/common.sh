@@ -1,6 +1,6 @@
 #!/bin/false
 
-source /opt/starforge-ai/etc/environment.sh
+source /opt/ai-dock/etc/environment.sh
 
 build_common_main() {
     apt update
@@ -39,10 +39,10 @@ build_common_install_python() {
 
 build_common_install_jupyter() {
     $APT_INSTALL \
-        python3.12-full \
-        python3.12-dev \
-        python3.12-venv
-    python3.12 -m venv "$JUPYTER_VENV"
+        python3.11-full \
+        python3.11-dev \
+        python3.11-venv
+    python3.11 -m venv "$JUPYTER_VENV"
     nvm use default
     "$JUPYTER_VENV_PIP" install --no-cache-dir \
         jupyterlab \

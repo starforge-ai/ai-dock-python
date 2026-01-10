@@ -6,7 +6,7 @@ on:
   #  branches: [ "main" ]
 
 env:
-  UBUNTU_VERSION: 22.04
+  UBUNTU_VERSION: 24.04
   BUILDX_NO_DEFAULT_ATTESTATIONS: 1
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         build:
-          - { latest: "false", python: "3.12", venv: "python_312" }
+          - { latest: "false", python: "3.11", venv: "python_311" }
     steps:
       - name: Free Space
         run: |
@@ -87,28 +87,46 @@ jobs:
         build:
          - {
               latest: "false",
-              python: "3.12",
-              venv: "python_312",
+              python: "3.11",
+              venv: "python_311",
               cuda: "13.1.0-base",
            }
          - {
               latest: "false",
-              python: "3.12",
-              venv: "python_312",
+              python: "3.11",
+              venv: "python_311",
               cuda: "13.0.2-base",
            }  
          - {
               latest: "false",
-              python: "3.12",
-              venv: "python_312",
+              python: "3.11",
+              venv: "python_311",
               cuda: "13.0.2-cudnn-runtime",
            }
          - {
               latest: "false",
-              python: "3.12",
-              venv: "python_312",
+              python: "3.11",
+              venv: "python_311",
               cuda: "13.0.2-cudnn-devel",
-           }      
+           } 
+         - {
+              latest: "false",
+              python: "3.11",
+              venv: "python_311",
+              cuda: "12.9.1-base",
+           }  
+         - {
+              latest: "false",
+              python: "3.11",
+              venv: "python_311",
+              cuda: "12.9.1-cudnn-runtime",
+           }
+         - {
+              latest: "false",
+              python: "3.11",
+              venv: "python_311",
+              cuda: "12.9.1-cudnn-devel",
+           }           
     steps:
       - name: Free Space
         run: |
@@ -178,20 +196,20 @@ jobs:
         build:
           - {
               latest: "false",
-              python: "3.12",
-              venv: "python_312",
+              python: "3.11",
+              venv: "python_311",
               rocm: "7.0.3-core",
             }
           - {
               latest: "false",
-              python: "3.12",
-              venv: "python_312",
+              python: "3.11",
+              venv: "python_311",
               rocm: "7.0.3-runtime",
             }
           - {
               latest: "false",
-              python: "3.12",
-              venv: "python_312",
+              python: "3.11",
+              venv: "python_311",
               rocm: "7.0.3-devel",
             }
     steps:

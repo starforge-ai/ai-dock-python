@@ -5,13 +5,13 @@ services:
     build:
       context: ./build
       args:
-        IMAGE_BASE: ${IMAGE_BASE:-ghcr.io/starforge-ai/base-image:v2-cuda-13.1.0-runtime-22.04}
+        IMAGE_BASE: ${IMAGE_BASE:-ghcr.io/starforge-ai/base-image:v2-cuda-12.9.1-runtime-24.04}
         PYTHON_VERSION: ${PYTHON_VERSION:-all}
-        PYTHON_VENV_NAME: ${PYTHON_VENV_NAME:-python_312}
+        PYTHON_VENV_NAME: ${PYTHON_VENV_NAME:-python_311}
       tags:
-        - "ghcr.io/starforge-ai/python:${IMAGE_TAG:-all-v2-cuda-13.1.0-runtime-22.04}"
+        - "ghcr.io/starforge-ai/python:${IMAGE_TAG:-all-v2-cuda-12.9.1-runtime-24.04}"
 
-    image: ghcr.io/starforge-ai/python:${IMAGE_TAG:-all-v2-cuda-13.1.0-runtime-22.04}
+    image: ghcr.io/starforge-ai/python:${IMAGE_TAG:-all-v2-cuda-12.9.1-runtime-24.04}
 
     ## For Nvidia GPU's - You probably want to uncomment this
     #deploy:
@@ -33,7 +33,7 @@ services:
       # Will echo to root-owned authorized_keys file;
       # Avoids changing local file owner
       - ./config/authorized_keys:/root/.ssh/authorized_keys_mount
-      - ./config/provisioning/default.sh:/opt/starforge-ai/bin/provisioning.sh
+      - ./config/provisioning/default.sh:/opt/ai-dock/bin/provisioning.sh
 
     ports:
       # SSH available on host machine port 2222 to avoid conflict. Change to suit

@@ -23,23 +23,23 @@ Tags follow these patterns:
 ##### _CUDA_
 - `:[python-version]-v2-cuda-[x.x.x]-[base|runtime|devel]-[ubuntu-version]`
 
-- `:latest-cuda` &rarr; `:3.12-v2-cuda-13.1.0-cudnn8-runtime-22.04`
+- `:latest-cuda` &rarr; `:3.11-v2-cuda-12.9.1-cudnn8-runtime-24.04`
 
 ##### _ROCm_
 - `:[python-version]-v2-rocm-[x.x.x]-[core|runtime]-[ubuntu-version]`
 
-- `:latest-rocm` &rarr; `:3.12-v2-rocm-6.0-runtime-22.04`
+- `:latest-rocm` &rarr; `:3.11-v2-rocm-6.0-runtime-24.04`
 
 ROCm builds are experimental. Please give feedback.
 
 ##### _CPU_
 - `:[python-version]-v2-cpu-[ubuntu-version]`
 
-- `:latest-cpu` &rarr; `:3.12-v2-cpu-22.04`
+- `:latest-cpu` &rarr; `:3.11-v2-cpu-24.04`
 
 Browse [here](https://github.com/starforge-ai/python/pkgs/container/python) for an image suitable for your target environment.
 
-Supported Python versions: `3.12`
+Supported Python versions: `3.11`
 
 Supported Platforms: `NVIDIA CUDA`, `AMD ROCm`, `CPU`
 

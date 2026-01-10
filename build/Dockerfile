@@ -1,5 +1,5 @@
 # For build automation - Allows building from any ai-dock base image
-ARG IMAGE_BASE="base-image:v2-cuda-13.1.0-base-22.04"
+ARG IMAGE_BASE="ghcr.io/starforge-ai/base-image:v2-cuda-12.9.1-base-24.04"
 FROM ${IMAGE_BASE}
 
 LABEL org.opencontainers.image.source=https://github.com/starforge-ai/python
@@ -19,7 +19,7 @@ COPY --chown=0:1111 ./COPY_ROOT_0/ /
 # ENV for inheritance
 ARG PYTHON_VERSION=all
 ENV PYTHON_VERSION=${PYTHON_VERSION}
-ARG PYTHON_VENV_NAME=python_310
+ARG PYTHON_VENV_NAME=python_311
 ENV PYTHON_VENV_NAME=${PYTHON_VENV_NAME}
 ENV PYTHON_DEFAULT_VENV=${PYTHON_VENV_NAME}
 ENV OPT_SYNC=$OPT_SYNC
@@ -27,7 +27,7 @@ ENV IMAGE_SLUG="python"
 # Use build scripts to ensure we can build all targets from one Dockerfile in a single layer.
 # Don't put anything heavy in here - We can use multi-stage building above if necessary.
 
-RUN set -eo pipefail && /opt/starforge-ai/bin/build/layer0/init.sh | tee /var/log/build.log
+RUN set -eo pipefail && /opt/ai-dock/bin/build/layer0/init.sh | tee /var/log/build.log
 
-# Keep init.sh as-is and place additional logic in /opt/starforge-ai/bin/preflight.sh
+# Keep init.sh as-is and place additional logic in /opt/ai-dock/bin/preflight.sh
 CMD ["init.sh"]
