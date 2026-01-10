@@ -5,13 +5,13 @@ services:
     build:
       context: ./build
       args:
-        IMAGE_BASE: ${IMAGE_BASE:-ghcr.io/starforge-ai/base-image:v2-cuda-12.9.1-runtime-24.04}
+        IMAGE_BASE: ${IMAGE_BASE:-ghcr.io/starforge-ai/base-image:v2-cuda-13.0.2-runtime-24.04}
         PYTHON_VERSION: ${PYTHON_VERSION:-all}
         PYTHON_VENV_NAME: ${PYTHON_VENV_NAME:-python_311}
       tags:
-        - "ghcr.io/starforge-ai/python:${IMAGE_TAG:-all-v2-cuda-12.9.1-runtime-24.04}"
+        - "ghcr.io/starforge-ai/python:${IMAGE_TAG:-all-v2-cuda-13.0.2-runtime-24.04}"
 
-    image: ghcr.io/starforge-ai/python:${IMAGE_TAG:-all-v2-cuda-12.9.1-runtime-24.04}
+    image: ghcr.io/starforge-ai/python:${IMAGE_TAG:-all-v2-cuda-13.0.2-runtime-24.04}
 
     ## For Nvidia GPU's - You probably want to uncomment this
     #deploy:

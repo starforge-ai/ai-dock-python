@@ -23,7 +23,7 @@ Tags follow these patterns:
 ##### _CUDA_
 - `:[python-version]-v2-cuda-[x.x.x]-[base|runtime|devel]-[ubuntu-version]`
 
-- `:latest-cuda` &rarr; `:3.11-v2-cuda-12.9.1-cudnn8-runtime-24.04`
+- `:latest-cuda` &rarr; `:3.11-v2-cuda-13.0.2-cudnn8-runtime-24.04`
 
 ##### _ROCm_
 - `:[python-version]-v2-rocm-[x.x.x]-[core|runtime]-[ubuntu-version]`
