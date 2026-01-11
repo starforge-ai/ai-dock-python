@@ -5,7 +5,7 @@ services:
     build:
       context: ./build
       args:
-        IMAGE_BASE: ${IMAGE_BASE:-ghcr.io/starforge-ai/base-image:v2-cuda-13.0.2-runtime-24.04}
+        IMAGE_BASE: ${IMAGE_BASE:-ghcr.io/starforge-ai/ai-dock-base-image:v2-cuda-13.0.2-runtime-24.04}
         PYTHON_VERSION: ${PYTHON_VERSION:-all}
         PYTHON_VENV_NAME: ${PYTHON_VENV_NAME:-python_311}
       tags:
