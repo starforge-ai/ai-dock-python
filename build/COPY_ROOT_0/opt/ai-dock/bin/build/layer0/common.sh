@@ -39,10 +39,10 @@ build_common_install_python() {
 
 build_common_install_jupyter() {
     $APT_INSTALL \
-        python3.10-full \
-        python3.10-dev \
-        python3.10-venv
-    python3.10 -m venv "$JUPYTER_VENV"
+        python3.11-full \
+        python3.11-dev \
+        python3.11-venv
+    python3.11 -m venv "$JUPYTER_VENV"
     nvm use default
     "$JUPYTER_VENV_PIP" install --no-cache-dir \
         jupyterlab \
