@@ -6,12 +6,15 @@ Run python in a cloud-first AI-Dock container. Nothing is added to the installed
 
 This image provides a great starting point for python development when used standalone but its also a solid foundation for extending upon.
 
+## Disclaimer
+
+This is a fork of [ai-dock's python](https://github.com/ai-dock/python). The purpose of this repo is to update to the latest versions of Cuda(12.9.1,13.0.2), Python(3.11), ROCM(7.0.3), and Ubuntu(24.04). I have only tested the Cuda 13.02 version, if you try any of the other versions, please let me know.   
 
 ## Documentation
 
 All AI-Dock containers share a common base which is designed to make running on cloud services such as [vast.ai](https://link.ai-dock.org/vast.ai) and [runpod.io](https://link.ai-dock.org/runpod.io) as straightforward and user friendly as possible.
 
-Common features and options are documented in the [base wiki](https://github.com/starforge-ai/base-image/wiki) but any additional features unique to this image will be detailed below.
+Common features and options are documented in the [base wiki](https://github.com/ai-dock/base-image/wiki) but any additional features unique to this image will be detailed below.
 
 
 ## Version Tags
