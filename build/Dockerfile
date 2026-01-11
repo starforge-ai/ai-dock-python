@@ -1,5 +1,5 @@
 # For build automation - Allows building from any ai-dock base image
-ARG IMAGE_BASE="ghcr.io/starforge-ai/base-image:v2-cuda-13.0.2-base-24.04"
+ARG IMAGE_BASE="ghcr.io/starforge-ai/ai-dock-base-image:v2-cuda-13.0.2-base-24.04"
 FROM ${IMAGE_BASE}
 
 LABEL org.opencontainers.image.source=https://github.com/starforge-ai/python
